@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap Ödev</title>
+  </head>
+
+  <body>
+    <input type="text" id="num1" placeholder="Sayı 1">
+    <input type="text" id="num2" placeholder="Sayı 2">
+    
+    <div>
+        <button onclick="toplama()">Add</button>
+        <button onclick="cikarma()">Reduce</button>
+    </div>
+
+    <div>
+        <button onclick="carpma()">Multiple</button>
+        <button onclick="bolme()">Divide</button>
+    </div>
+
+    <div>
+        <p id="sonuc"></p>
+
+    </div>
+   
+  </body>
+
+  <script>
+
+    function toplama() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var sonuc = num1 + num2;
+      document.getElementById("sonuc").innerHTML = "Sonuç: " + sonuc.toFixed(5);
+    }
+
+    function cikarma() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var sonuc = num1 - num2;
+      document.getElementById("sonuc").innerHTML = "Sonuç: " + sonuc.toFixed(5);
+    }
+
+    function carpma() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var sonuc = num1 * num2;
+      document.getElementById("sonuc").innerHTML = "Sonuç: " + sonuc.toFixed(5);
+    }
+
+    function bolme() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      if (num2 !== 0) {
+        var sonuc = num1 / num2;
+        document.getElementById("sonuc").innerHTML = "Sonuç: " + sonuc.toFixed(5);
+      } else {
+        document.getElementById("sonuc").innerHTML = "Sıfıra Bölemeyiz!";
+      }
+    }
+
+  </script>
+
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./index.css">
+<title> Bootstrap Ödev </title>
+</head>
+<body>
+
+<div>
+    <label for="">Değeri Giriniz...</label>
+        <input type="text" id="value">
+</div>
+
+<div>
+    <button onclick="calculate()">Add</button>
+</div>
+
+</body>
+
+<script>
+    function calculate(){
+        var value = document.getElementById("value").value
+
+        if(!isNaN(value)){
+            var newValue = value * 1.8;
+            alert(newValue);
+        } else {
+            alert("Geçersiz Değer");
+        }
+       
+     //  var newValue = value * 1.8
+      // alert(newValue);
+    }
+</script>
+</html>
